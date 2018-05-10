@@ -1,10 +1,10 @@
 ---
-instances: 1
-memory: 1G
 applications:
-  - name: cook
-    host: cookie
-    services:
-      - config-server
-    env:
-      SPRING_PROFILES_ACTIVE: dev
+- name: cook
+  instances: 1
+  memory: 1G
+  random-route: true
+  services:
+    - config-server
+  env:
+    SPRING_PROFILES_ACTIVE: dev
